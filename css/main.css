@@ -171,6 +171,8 @@ header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.65) 0% 100%), url(../img/bg.jpg);
     background-size: cover;
     min-height: 100vh;
+    justify-content: center;
+     align-items: center;
 }
 
 header div.social a {
