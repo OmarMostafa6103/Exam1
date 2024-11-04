@@ -1,0 +1,630 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-block-start: 70px;
+}
+
+:root {
+    --main-font: 'Montserrat', sans-serif;
+    --sec-font: 'Poppins', sans-serif;
+    --maincolor: #1C1C1C;
+    --colorblack: #343434;
+    --colorgray: #748182;
+}
+
+.main-font {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sec-font {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 1170px;
+}
+
+.bg-lightblack {
+    background-color: var(--maincolor);
+}
+
+.bg-gray {
+    background: #f7f7f7;
+}
+
+.text-lightblack {
+    color: var(--maincolor);
+}
+
+.text-14 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.text-gray {
+    color: var(--colorgray);
+}
+
+h3 {
+    font-family: var(--main-font);
+    color: var(--colorblack);
+    font-weight: 800;
+    margin-bottom: 5px;
+    font-size: 30px;
+    line-height: 33px;
+}
+
+h3.dotted {
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 900;
+    position: relative;
+    width: fit-content;
+    z-index: 1;
+}
+
+h3::after {
+    content: '.';
+}
+
+h3.dotted::before {
+    content: '';
+    width: 100%;
+    height: 30px;
+    background-image: url(../img/dots.png);
+    background-size: auto;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+}
+
+/* !============= nav ============== */
+#nav.scrolled {
+    display: none;
+}
+
+#nav.scrolled-about {
+    background-color: white;
+    display: block;
+    box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+    padding-block: 5px !important;
+}
+
+#nav.scrolled-about a {
+    color: #1c1c1c !important;
+}
+
+.nav-underlin .nav-link.active,
+.nav-underlin .show>.nav-link {
+    font-weight: 400;
+}
+
+
+.nav-underlin .nav-link {
+    position: relative;
+}
+
+.nav-underlin .nav-item:first-child .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: white;
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+.nav-underlin .nav-item:first-child .nav-link.active::after {
+    width: 100%;
+}
+
+.nav-underlin .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 6px;
+    height: 2px;
+    background-color: rgb(12, 12, 12);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.9s ease;
+}
+
+.nav-underlin .nav-link.active::after {
+    transform: scaleX(1);
+}
+
+nav div a.navbar-brand {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 25.7px;
+    letter-spacing: 1px;
+}
+
+.nav-underlin .nav-link:hover {
+    color: white;
+    border-bottom-color: transparent;
+}
+
+.nav-link:focus,
+.navbar-nav .nav-link.active {
+    color: rgb(254, 254, 254);
+    border-bottom-color: currentcolor !important;
+}
+
+ul.nav-menu-font li a {
+    color: white;
+    font-family: var(--sec-font);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    transition: all 0.5s;
+}
+
+/* !============= end nav ============== */
+
+
+/* ?=============  header============== */
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65) 0% 100%), url(../img/bg.jpg);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+header div.social a {
+    width: 30px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px;
+    text-decoration: none;
+}
+
+header div div h5 {
+    font-family: var(--main-font);
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+header div div h1 {
+    font-family: var(--main-font);
+    font-size: 60px;
+    line-height: 72px;
+    font-weight: 200;
+}
+
+header div div h1 p span {
+    font-weight: 400;
+}
+
+/* ?============= end header============== */
+
+
+/* *============= about ============== */
+#about .imgframe .dot {
+    background-image: url(../img/dots.png);
+    background-size: auto;
+    z-index: -1;
+    width: 80%;
+    height: 75%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#about h3+span {
+    font-family: var(--sec-font);
+    color: #999;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+#about p.intro {
+    font-family: var(--sec-font);
+    color: var(--colorgray);
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#about p.intro span {
+    font-weight: 700;
+}
+
+.progress {
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+}
+
+.progress-bar {
+    animation: slide 1s linear forwards;
+}
+
+@keyframes slide {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.progress-text {
+    font-family: var(--main-font);
+    font-size: 13px;
+    line-height: 14.3px;
+    font-weight: 500;
+}
+
+#about .content button {
+    font-family: var(--main-font);
+    font-size: 13px;
+    line-height: 18.6px;
+    font-weight: 400;
+    border: 1px solid var(--maincolor);
+    transition: all 0.5s;
+}
+
+#about .content button.bg-lightblack:hover {
+    background-color: white;
+    color: black !important;
+}
+
+#about .content button.bg-white:hover {
+    background-color: var(--maincolor) !important;
+    color: rgb(255, 255, 255);
+}
+
+/* *============= end about ============== */
+
+
+/* !============= services ============== */
+#services div.content {
+    box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+}
+
+#services div.content a {
+    color: var(--maincolor);
+    transition: all 0.5s;
+}
+
+#services div.content:hover a {
+    background-color: var(--maincolor);
+    color: white;
+}
+
+#services div.content h6 {
+    font-family: var(--main-font);
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+/* !============= end services ============== */
+
+
+/* *============= portfolio ============== */
+#works ul.nav-tabs li button {
+    font-family: var(--sec-font);
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 700;
+    color: var(--maincolor);
+    border: 3px solid transparent;
+    transition: all 0.5s;
+}
+
+#works ul.nav-tabs li button.active {
+    border-bottom: 3px solid var(--maincolor);
+}
+
+#works div.hov-lay {
+    background-color: white;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+#works .item div.hov-lay h6 {
+    font-family: var(--main-font);
+    font-size: 12px;
+    line-height: 13.2px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    transition: all 0.5s;
+}
+
+#works .item:hover div.hov-lay {
+    top: 5px;
+    opacity: 1;
+}
+
+#works .item:hover div.hov-lay h6 {
+    margin-bottom: 10px;
+}
+
+#works .item div.hov-lay a {
+    color: white;
+    background-color: var(--maincolor);
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--maincolor);
+    border-radius: 100%;
+    text-decoration: none;
+}
+
+#works .item div.hov-lay a:hover {
+    color: var(--maincolor);
+    background-color: white;
+}
+
+/* *============= end portfolio ============== */
+
+/* ?============= testimonials ============== */
+#clients button[data-bs-target="#carousel-example-generic"] {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #d6d6d6;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+#clients button[data-bs-target="#carousel-example-generic"].active,
+#clients button[data-bs-target="#carousel-example-generic"]:hover {
+    background-color: #869791;
+}
+
+#clients .container .content p {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    word-spacing: 2px;
+    color: var(--colorgray);
+    margin-inline: auto;
+}
+
+#clients .container .content h6 {
+    color: var(--colorblack);
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+}
+
+#clients .container .content span {
+    color: #888;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+}
+
+/* ?============= end portfolio ============== */
+
+
+/* !============= counter ============== */
+#counter .container .content p {
+    color: var(--colorblack);
+    font-size: 30px;
+    line-height: 33px;
+    font-weight: 900;
+    margin-block: 20px;
+}
+
+#counter .container .content p.first::after {
+    content: counter(count);
+    animation: f-counter 0.7s linear forwards;
+}
+
+#counter .container .content span {
+    color: var(--colorgray);
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+/* !============= end counter ============== */
+
+
+/* ?============= team ============== */
+#team .card-body {
+    background-color: #5B5B5B;
+}
+
+#team .card-body h4 {
+    font-size: 25px;
+    line-height: 27.5px;
+    font-weight: 500;
+}
+
+#team .card-body h5 {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 700;
+}
+
+#team .card .img-container img {
+    transition: all 0.5s;
+}
+
+#team .card .img-container div.hov-lay {
+    background-color: white;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) rotateY(180deg);
+    transition: all 0.5s;
+    transform-origin: center;
+}
+
+#team .card .img-container div.hov-lay a {
+    color: white;
+    background-color: var(--maincolor);
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    border-radius: 100%;
+    text-decoration: none;
+    border: 1px solid var(--maincolor);
+}
+
+/* team hover */
+#team .card:hover .img-container div.hov-lay {
+    opacity: 1;
+    width: 96%;
+    height: 96%;
+    transform: translate(-50%, -50%) rotatey(360deg);
+}
+
+#team .card:hover .img-container div.hov-lay a {
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+}
+
+#team .card .img-container div.hov-lay a:hover {
+    color: var(--maincolor);
+    background-color: white;
+}
+
+#team .card .img-container:hover img {
+    scale: 1.2;
+}
+
+/* ?============= end team ============== */
+
+
+/* !============= contact ============== */
+#contact .frame .content div {
+    display: inline-block;
+    background-color: #f7f7f7;
+    color: var(--maincolor);
+    transition: all 0.5s;
+}
+
+#contact .frame .content:hover div {
+    background-color: var(--maincolor);
+    color: white;
+}
+
+#contact .frame .content p {
+    color: var(--colorblack);
+    font-size: 16;
+    line-height: 18px;
+    font-weight: 700;
+}
+
+#contact .frame .content span {
+    color: var(--colorgray);
+    font-size: 15px;
+    line-height: 24px;
+}
+
+#contact .frame form input,
+#contact .frame form textarea {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#contact .frame form input:focus,
+#contact .frame form textarea:focus {
+    border: 0px solid transparent;
+    outline: none;
+}
+
+#contact .frame form button {
+    font-size: 13px;
+    line-height: 19px;
+    background-color: var(--maincolor);
+    color: white;
+    border: 1px solid var(--maincolor);
+    transition: all 0.5s;
+    padding: 10px 40px;
+}
+
+#contact .frame form button:hover {
+    background-color: white;
+    color: var(--maincolor);
+}
+
+/* !============= end contact ============== */
+
+
+/* footer */
+#footer {
+    font-family: var(--sec-font);
+    background: var(--maincolor);
+    color: var(--colorgray);
+    font-size: 13px;
+    line-height: 21px;
+    word-spacing: 2px;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* end footer */
+@media screen and (min-width:992px) and (max-width:1200px) {
+    .container {
+        width: 970px;
+    }
+
+    header div div h1 {
+        font-size: 44px;
+        line-height: 52.8px;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:991px) {
+    .container {
+        width: 750px;
+    }
+
+    header div div h1 {
+        font-size: 44px;
+        line-height: 52.8px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        max-width: 100%;
+        margin-inline: 0;
+        padding: 20px;
+    }
+
+    header div div h1 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .nav-underlin .nav-link {
+        display: inline-block;
+    }
+
+    .nav-underlin .nav-link::after {
+
+        left: 0px;
+        right: 0px;
+
+    }
+
+}
